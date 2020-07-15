@@ -1,12 +1,25 @@
 #!groovy
 @Library('sharedlibrary')_
+
+st_pipeline_ci([
+ git_url: 'https://github.com/jenkins-docs/simple-java-maven-app.git',
+ git_branch: 'master',
+ mvnPath: 'pom.xml'
+])
+
+
+
+
+
+
+
 //def checkout  = new checkout()
 //checkout
 //([
 //mvnPath: "/usr/path"
 //])
 
-test = """
+/*test = """
 apiVersion: "v1"
 kind: "Pod"
 spec:
@@ -42,4 +55,5 @@ stages{
         }}
     }
 }
+*/
 
